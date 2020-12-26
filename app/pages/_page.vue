@@ -50,7 +50,7 @@ export default class PageTemplate extends Vue {
 
     try {
       // const page = require(`@/content/pages/${params.page}.json`);
-      const page = await fetch('https://api.kek.plep.ru/');
+      const page = JSON.stringify(await (await fetch('https://api.kek.plep.ru/')).json());
 
       return {
         page,
